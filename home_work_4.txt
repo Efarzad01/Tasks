@@ -1,0 +1,144 @@
+package practice;
+
+public class BMW extends Tesla {
+
+	public void go() {
+		System.out.println("Start the Engine");
+	}
+	public void hold() {
+		System.out.println("Stop the Engine");
+	}
+	public void airpack() {
+		System.out.println("Airbag will open upon hit something");
+	}
+	@Override
+	public void electricDrive() {
+		System.out.println("Drive by Charging");
+		
+	}
+	
+	}
+
+
+
+
+
+
+package practice;
+
+public interface car {
+	
+	public void start();
+	public void stop();
+	public void airbag();
+
+}
+
+
+
+
+
+
+package practice;
+
+public class mercedes extends BMW implements car  {
+
+	public void tilt() {
+		System.out.println("abc");
+	}
+
+	@Override
+	public void start() {
+		System.out.println("go");
+		
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("hold");
+		
+	}
+
+	@Override
+	public void airbag() {
+		System.out.println("air");
+		
+	}
+	
+
+		
+		
+	
+
+}
+
+
+
+package practice;
+
+public abstract class Tesla {
+	
+	public abstract void electricDrive();
+	
+	public void autoPilot() {
+		System.out.println("This car is able to drive with having the autoPilot on without any touch");
+	}
+	
+
+}
+
+
+
+package practice;
+
+public interface SafetyFeatures {
+	
+	public void airbag();
+	public void seatbetls();
+	public void LaneChangingAssist();
+
+}
+
+
+package practice;
+
+public abstract class ModernCar implements SafetyFeatures  {
+	
+	public abstract void Newgen();
+	
+	
+
+}
+
+
+
+package practice;
+
+public class Audi extends ModernCar {
+
+	@Override
+	public void airbag() {
+		System.out.println("airbag");
+		
+	}
+
+	@Override
+	public void seatbetls() {
+		System.out.println("seatbelts");
+		
+	}
+
+	@Override
+	public void LaneChangingAssist() {
+		System.out.println("lane change assist is a great feature");		
+	}
+
+	@Override
+	public void Newgen() {
+		System.out.println("new generation cars have all new features");
+		
+	}
+	
+	
+
+}
