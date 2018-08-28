@@ -1,0 +1,21 @@
+package StaticMethod;
+
+public class SMethod {
+
+    public void StuName(){
+        System.out.println("Call student by name ");
+    }
+    public static void StuId(){
+        System.out.println("Student should have an id");
+    }
+}
+
+package StaticMethod;
+
+public class test_stu {
+    public static void main(String[] args) {
+        SMethod st = new SMethod();
+        st.StuName();
+        SMethod.StuId();
+    }
+}
